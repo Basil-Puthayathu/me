@@ -534,15 +534,26 @@ img.responsive {
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
-    transition: all 0.3s ease-out;
+    transition: transform 0.15s ease-out;
+}
+.project-content h3 {
+    color: #2674a1;
+    margin-bottom: 10px;
 }
 
-.project-card:hover {
-    transition: all 0.2s ease-out;
-    box-shadow: 0 4px 8px rgba(38, 38, 38, 0.3);
-    top: -8px;
-    background-color: var(--dark-color-alt);
+.project-content p {
+    color: #fff;
+    font-size: 0.9rem;  
 }
+.project-card:hover {
+   transform: translateY(-5px);
+   background: #2674a1;
+   .project-content h3, .project-content p {
+         color:var(--dark-color);
+   }
+   color: var(--secondary-color);
+}
+
 
 .project-card:before {
     content: "";
@@ -924,38 +935,10 @@ nav.navbar span {
     margin-top: 3rem;
 }
 
-.project-card {
-    background: rgba(255, 255, 255, 0.05); /* Subtle dark card */
-    border: 1px solid #2674a1; /* Your theme color */
-    border-radius: 20px;
-    padding: 30px 20px;
-    text-decoration: none;
-    transition: transform 0.3s ease, background 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 270px;
-}
 
 
-.project-content h3 {
-    color: #2674a1;
-    margin-bottom: 10px;
-}
 
-.project-content p {
-    color: #fff;
-    font-size: 0.9rem;  
-}
-.project-card:hover {
-   transform: translateY(-5px);
-   background: #2674a1;
-   .project-content h3, .project-content p {
-         color:var(--dark-color);
-   }
-   color: var(--secondary-color);
-}
+
 
 /* Responsive: Phone (1 Column) */
 @media (max-width: 768px) {
